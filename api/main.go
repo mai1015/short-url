@@ -23,7 +23,7 @@ func main() {
 	app := fiber.New()
 	app.Use(logger.New())
 	setupRoutes(app)
-	app.Listen(":3000") // + os.Getenv("APP_PORT"))
+	app.Listen(":" + os.Getenv("PORT"))
 	// base62EncodedString := helpers.Base62Encode(9999999)
 	// fmt.Println(base62EncodedString)
 	// fmt.Println(helpers.Base62Decode(base62EncodedString))

@@ -15,11 +15,6 @@ func setupRoutes(app *fiber.App) {
 }
 
 func main() {
-	err := godotenv.Load()
-	if err != nil {
-		log.Fatal("Could not load environment file.")
-	}
-
 	app := fiber.New()
 	app.Use(logger.New())
 	setupRoutes(app)
